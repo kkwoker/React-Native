@@ -9,16 +9,22 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
+import Blink from './components/Blink';
 
 export default class AwesomeProject extends Component {
   render() {
+    const pic = {
+      uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+    };
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
+        <Blink text="I love cheese"/>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
         </Text>
@@ -26,6 +32,7 @@ export default class AwesomeProject extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
+        <Image source={pic} style={{width: 193, height: 110}} />
       </View>
     );
   }
